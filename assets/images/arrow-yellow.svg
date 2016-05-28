@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="82px" height="16px" viewBox="0 0 82 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow-11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow">
+            <g id="Welcome">
+                <g id="Desktop-HD">
+                    <g id="Arrow-11">
+                        <path d="M0,8 L80,8" id="Stroke-11" stroke="#F1EC7A" stroke-width="2"></path>
+                        <polyline id="Arrow-head-11" fill="#F1EC7A" points="73.3425197 16 72 14.5679526 79.109252 8.00146726 72 1.43302562 73.3425197 0 82 8.00146726 73.3425197 16"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

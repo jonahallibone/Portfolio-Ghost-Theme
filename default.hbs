@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  {{!-- STYLESHEET --}}
+
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  {{!-- FAVICON --}}
+  {{!-- <link rel="shortcut icon" href="{{asset "favicon.ico"}}"> --}}
+
+  {{!--TYPEKIT--}}
+
+  <script src="https://use.typekit.net/lwe5rtd.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+  <div class="wrapper">
+    {{!-- The blog navigation links --}}
+    {{navigation}}
+    <div class="content-box">
+      <div id="container">
+        {{{ body }}}
+      </div>
+    </div>
+  </div>
+  <!--JQUERY SCRIPTS-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  {{ghost_foot}}
+  <script type="text/javascript" src="{{asset "js/jonahallibone.js"}}"></script>
+</body>
+</html>
