@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 html, body {
   margin: 0 auto;
 }
@@ -12,6 +15,7 @@ body, button {
 body {
   transition: .25s ease all;
   border: 10px solid #F6A7B8;
+  min-height: 100%;
 }
 
 
@@ -589,6 +593,41 @@ h3.recent-title:after {
   -webkit-animation: mymove .5s;
   display: block;
 }
+
+
+/*==== Post Page & Page Styles ====*/
+
+article.post h1.post-title {
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: .5em;
+}
+
+article.post .post-content {
+  font-family: "minion-pro",serif;
+  white-space: pre-wrap;
+  color: #34495e;
+}
+
+section.post-info {
+  font-size: .65em;
+  text-transform: uppercase;
+}
+
+article.post time.post-date {
+  color: #8CABD9;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+}
+
+article.post time.post-date:after {
+  content: '\2022\a0';
+  line-height: 1;
+}
+
+
+/*==Animations ==*/
 
 
 @-webkit-keyframes mymove {

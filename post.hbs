@@ -1,0 +1,25 @@
+{{!< default}}
+
+<!-- Everything inside the #post tags pulls data from the post -->
+{{#post}}
+
+<article class="{{post_class}} post">
+  <header class="post-header">
+    <h1 class="text-salmon underline-yellow post-title">{{title}}</h1>
+    <section class="post-info">
+      <time class="post-date">
+        {{ date }}
+      </time>
+      {{#if tags}}
+        {{#foreach tags}}
+          <span class="category"><a href="{{url}}" title="{{name}}" class="tag-{{id}} text-salmon">{{name}}</a></span>
+        {{/foreach}}
+      {{/if}}
+    </section>
+  </header>
+  <section class="post-content">
+    {{content}}
+  </section>
+</article>
+
+{{/post}}
