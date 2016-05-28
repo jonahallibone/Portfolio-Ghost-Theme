@@ -2,7 +2,7 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 <div class="box" id="box-1">
   <div id="content">
-    <h3 class="text-blue recent-title">About</h3>
+    <h3 class="text-blue recent-title">About Me</h3>
     <h2 class="description text-blue">
       I'm a Web Developer + Designer
       at <a target="_blank" href="https://www.blackmarketu.com" class="text-salmon">BlackMarket U</a> in Burlington, VT.
@@ -22,30 +22,20 @@
 <div id="recent-posts">
   <h3 class="text-blue recent-title">Recent Posts</h3>
   <ul id="posts">
+    {{#foreach posts limit="3"}}
     <li>
-      <h3 class="title"><a href="" class="text-salmon">First blog post!</a></h3>
+      <h3 class="title"><a href="{{url}}" class="text-salmon">{{ title }}</a></h3>
       <div class="post-information">
-        <span class="date">MAY 3, 2016</span>
-        <span class="category"><a href="" class="text-salmon">Blogging</a></span>
+        <span class="date">{{date}}</span>
+        {{#if tags}}
+          {{#foreach tags}}
+            <span class="category"><a href="{{url}}" title="{{name}}" class="tag-{{id}} text-salmon">{{name}}</a></span>
+          {{/foreach}}
+        {{/if}}
       </div>
-      <p>Hello, this is a test post.</p>
+      <p>{{excerpt words="25"}}</p>
       <button role="button" class="button-block text-salmon"><span>Read More</span></button>
     </li>
-    <li>
-      <h3 class="title"><a href="" class="text-salmon">Second blog post!</a></h3>
-      <div class="post-information">
-        <span class="date">MAY 3, 2016</span>
-        <span class="category"><a href="" class="text-salmon">Politics</a></span>
-      </div>              <p>Hello, this is a test post.</p>
-      <button role="button" class="button-block button-clear text-salmon"><span>Read More</span></button>
-    </li>
-    <li>
-      <h3 class="title"><a href="" class="text-salmon">Third blog post!</a></h3>
-      <div class="post-information">
-        <span class="date">MAY 3, 2016</span>
-        <span class="category"><a href="" class="text-salmon">Cooking</a></span>
-      </div>              <p>Hello, this is a test post.</p>
-      <button role="button" class="button-block button-clear text-salmon"><span>Read More</span></button>
-    </li>
+    {{/foreach}}
   </ul>
 </div>
