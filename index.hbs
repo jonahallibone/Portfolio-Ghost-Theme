@@ -34,7 +34,9 @@
         {{/if}}
       </div>
       <p>{{excerpt words="25"}}</p>
-      <button role="button" class="button-block text-salmon"><span>Read More</span></button>
+      <a class="display-block no-border" href="{{url}}">
+        <button role="button" class="button-block text-salmon"><span>Read More</span></button>
+      </a>
     </li>
     {{/foreach}}
   </ul>
