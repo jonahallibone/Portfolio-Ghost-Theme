@@ -26,7 +26,7 @@ a.contact-side {
 }
 
 h2.description {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 .white {
@@ -256,7 +256,7 @@ h1.name {
   vertical-align: middle;
   padding-bottom: 0;
   line-height: 1em;
-  font-size: 1.8em;
+  font-size: 2.3rem;
   position: relative;
   z-index: 999;
 }
@@ -822,7 +822,7 @@ article.post code {
       }
 
       #content {
-        padding: 0em 0 0em 0;
+        padding: 1em 0 0em 0;
         width: 100%;
       }
 
