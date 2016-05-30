@@ -8,11 +8,26 @@
     </ul>
   </nav>
 </div>
-<header>
-  <h1 class="name"><a href="/" class="text-salmon">Jonah Allibone</a></h1>
-  <div class="burger open" role="button">
-    <div class="condiments salmon"></div>
-    <div class="condiments salmon"></div>
-    <div class="condiments salmon"></div>
+{{#is "post, page"}}
+<header class="nav post-page">
+  <div class="wrapper justify-block">
+    <h1 class="name"><a href="/" class="text-salmon">Jonah Allibone</a></h1>
+    <div class="burger open" role="button">
+      <div class="condiments salmon"></div>
+      <div class="condiments salmon"></div>
+      <div class="condiments salmon"></div>
+    </div>
   </div>
 </header>
+{{else}}
+<header class="nav">
+  <div class="wrapper justify-block">
+    <h1 class="name"><a href="/" class="text-salmon">Jonah Allibone</a></h1>
+    <div class="burger open" role="button">
+      <div class="condiments salmon"></div>
+      <div class="condiments salmon"></div>
+      <div class="condiments salmon"></div>
+    </div>
+  </div>
+</header>
+{{/is}}

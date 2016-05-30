@@ -25,6 +25,10 @@ a.contact-side {
   transform: rotate(-270deg) translate(200%,400%);
 }
 
+h2.description {
+  font-size: 2.5rem;
+}
+
 .white {
   background-color: #FFFFFF;
 }
@@ -120,7 +124,7 @@ a.contact-side {
   width: 100%;
   display: block;
   border-radius: 2px;
-  margin-top: .25em;
+  margin-top: 4px;
   transition: .35s ease all;
 }
 
@@ -136,7 +140,7 @@ button {
   cursor: pointer;
 }
 
-header {
+header.nav {
   padding: 1em 0;
   width: 100%;
   text-align: justify;
@@ -145,23 +149,18 @@ header {
   text-align-last: justify;
 }
 
-header.fixed {
-  position: fixed;
-  z-index: 999;
-  width: 70%;
-  box-sizing: border-box;
-  transform: translateX(-1em);
-  padding-left: 1em;
-  padding-right: 1.25em;
+header.nav.post-page {
+  background-color: #ecf0f1;
+  padding: 3em 0;
 }
 
-header:before{
+.justify-block:before{
     content: '';
     display: block;
     width: 100%;
 }
 
-header:after {
+.justify-block:after {
     content: '';
     display: inline-block;
     width: 100%;
@@ -406,12 +405,13 @@ img.img-absolute {
 
 h3.recent-title {
   display: inline;
-  font-size: 1.75em;
+  font-size: 2.5rem;
   position: relative;
   display: inline-block;
   line-height: 1;
   margin-bottom: 1em;
   color: #1D4D9F;
+  font-weight: bold;
 }
 
 h3.recent-title:after {
@@ -597,33 +597,115 @@ h3.recent-title:after {
 
 /*==== Post Page & Page Styles ====*/
 
-article.post h1.post-title {
-  display: inline-block;
+article.post {
+  display: block;
+  white-space: normal;
+}
+
+article.post h1,
+article.post h2,
+article.post h3,
+article.post h4,
+article.post h5,
+article.post h6 {
   line-height: 1;
-  margin-bottom: .5em;
+  font-weight: bold;
+  color: #1D4D9F;
+  margin-top: 3em;
+  border-bottom: 2px solid #F1EC7A;
+  display: inline-block;
+}
+
+article.post h2 {
+  font-size: 1.75rem;
+}
+
+article.post h3 {
+  font-size: 1.65rem;
+}
+
+article.post h4 {
+  font-size: 1.55rem;
+}
+
+article.post h5 {
+  font-size: 1.45rem;
+}
+
+article.post h6 {
+  font-size: 1.35rem;
+}
+
+article.post img {
+  display: block;
+  width: 100%;
+}
+
+article.post h1.post-title {
+  display: inline;
+  line-height: 1.75;
+  font-size: 2.5rem;
+  font-weight: bold;
+  word-wrap: normal;
+}
+
+article.post .post-header {
+  padding: 2em 0;
 }
 
 article.post .post-content {
-  font-family: "minion-pro",serif;
-  white-space: pre-wrap;
-  color: #34495e;
+  /*font-family: "minion-pro",serif;*/
+  word-wrap: break-word;
+  color: #1B288A;
 }
 
 section.post-info {
+  padding-top: 2em;
   font-size: .65em;
+  display: block;
   text-transform: uppercase;
+}
+
+article.post a {
+  color: #F6A7B8;
 }
 
 article.post time.post-date {
   color: #8CABD9;
+}
+
+article.post span.category a {
+  border-bottom: 1px solid #F1EC7A;
+}
+
+article.post time.post-date,
+article.post span.category {
   display: inline-block;
   vertical-align: middle;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 article.post time.post-date:after {
   content: '\2022\a0';
   line-height: 1;
+}
+
+article.post p {
+  line-height: 1.5;
+  font-size: 1.65rem;
+}
+
+article.post code {
+  border: 1px solid #8CABD9;
+  background-color: rgba(140, 171, 217, 0.1);
+  display: inline-block;
+  padding: .5em;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  margin: .5em 0;
+  font-size: .75em;
 }
 
 
@@ -657,6 +739,10 @@ article.post time.post-date:after {
 
     /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
+
+      html,body {
+        font-size: 14px;
+      }
 
       #container {
         font-size: 21px;
@@ -710,6 +796,10 @@ article.post time.post-date:after {
     /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
 
+      html,body {
+        font-size: 14px;
+      }
+
       #recent-posts ul#posts {
         padding-top: 2em;
       }
@@ -723,7 +813,7 @@ article.post time.post-date:after {
       }
 
       #content {
-        padding: 4em 0 0em 0;
+        padding: 0em 0 0em 0;
         width: 100%;
       }
 
@@ -731,14 +821,14 @@ article.post time.post-date:after {
         padding: 1em 0 1em 0;
       }
 
-      h2 {
-        font-size: 1.75em;
-      }
-
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
+
+      html,body {
+        font-size: 16px;
+      }
 
       #recent-posts ul li:after {
         left: 100%;
@@ -769,7 +859,7 @@ article.post time.post-date:after {
       }
 
       #content {
-        padding: 5em 0 1em 0;
+        padding: 3em 0 1em 0;
         width: 80%;
       }
 
@@ -807,7 +897,7 @@ article.post time.post-date:after {
 
       #content {
         width: 100%;
-        padding: 5em 0 2em 0;
+        padding: 3em 0 2em 0;
       }
 
       #bottom-content {
