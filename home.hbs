@@ -1,0 +1,43 @@
+{{!< default}}
+
+<div class="box" id="box-1">
+  <div id="content">
+    <h3 class="text-blue recent-title">Hello!</h3>
+    <h2 class="description text-blue">
+      I'm a Web Developer + Designer
+      at <a target="_blank" href="https://www.blackmarketu.com" class="text-salmon">BlackMarket U</a> in Burlington, VT.
+    </h2>
+  </div>
+  <div id="bottom-content">
+    <h2 class="description text-blue">
+      <a href="mailto:jonah.allibone@mymail.champlain.edu" class="text-salmon">Contact me</a> or
+      <span class="no-break">
+        <a href="" class="text-salmon">See some shit</a>
+        <span class="arrow"></span>
+      </span>
+    </h2>
+  </div>
+</div>
+<div class="divider"></div>
+<div id="recent-posts">
+  <h3 class="text-blue recent-title">Recent Posts</h3>
+  <ul id="posts">
+    {{#foreach posts limit="3"}}
+    <li>
+      <h3 class="title"><a href="{{url}}" class="text-salmon">{{ title }}</a></h3>
+      <div class="post-information">
+        <span class="date">{{date}}</span>
+        {{#if tags}}
+          {{#foreach tags}}
+            <span class="category"><a href="{{url}}" title="{{name}}" class="tag-{{id}} text-salmon">{{name}}</a></span>
+          {{/foreach}}
+        {{/if}}
+      </div>
+      <p>{{excerpt words="25"}}</p>
+      <a class="display-block no-border" href="{{url}}">
+        <button role="button" class="button-block text-salmon"><span>Read More</span></button>
+      </a>
+    </li>
+    {{/foreach}}
+  </ul>
+</div>

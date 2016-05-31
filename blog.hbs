@@ -1,11 +1,11 @@
 {{!< default}}
 
 <!-- Everything inside the #post tags pulls data from the post -->
-{{#post}}
 
+{{#foreach posts}}
 <article class="{{post_class}} post">
   <header class="post-header">
-    <h1 class="text-blue underline-yellow post-title">{{title}}</h1>
+    <h2 class="text-blue underline-yellow post-title"><a href="{{url}}">{{title}}</a></h2>
     <section class="post-info">
       <time class="post-date">
         {{ date }}
@@ -18,8 +18,8 @@
     </section>
   </header>
   <section class="post-content">
-    {{content}}
+    {{ excerpt }}...
   </section>
 </article>
-
-{{/post}}
+{{/foreach }}
+{{pagination}}
