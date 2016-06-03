@@ -520,9 +520,10 @@ h3.recent-title:after {
 #recent-posts ul li h3.title a {
   position: relative;
   transition: .25s ease-in-out all;
+  white-space: normal;
+  display: inline;
 }
 
-#recent-posts ul li h3.title a:hover:after,
 #recent-posts ul li span.category:hover:after {
   width: 100%;
 }
